@@ -1,0 +1,19 @@
+﻿document.getElementById('appointmentForm').onsubmit = function(event) {
+    event.preventDefault();
+
+
+    // Get form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const date = document.getElementById('date').value;
+    const department = document.getElementById('department').value;
+
+
+    // Display confirmation message
+    const confirmationMessage = document.getElementById('confirmationMessage');
+    confirmationMessage.textContent = `Thank you, ${name}. Your appointment for ${department} on ${date} has been booked. We will contact you at ${email}.`;
+
+
+    // Clear the form
+    document.getElementById('appointmentForm').reset();
+};
